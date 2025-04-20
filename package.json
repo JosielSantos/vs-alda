@@ -24,6 +24,14 @@
         "extensions": [
           ".alda"
         ]
+      },
+      {
+        "command": "vs-alda.context.remove-first-line",
+        "title": "Alda: Remove First Line from Context"
+      },
+      {
+        "command": "vs-alda.context.remove-last-line",
+        "title": "Alda: Remove Last Line from Context"
       }
     ],
     "commands": [
@@ -38,6 +46,14 @@
       {
         "command": "vs-alda.stop",
         "title": "Alda: Stop"
+      },
+      {
+        "command": "vs-alda.context.add-selection",
+        "title": "Alda: Add Selection to Context"
+      },
+      {
+        "command": "vs-alda.context.clear",
+        "title": "Alda: Clear Context"
       }
     ],
     "keybindings": [
@@ -54,6 +70,26 @@
       {
         "command": "vs-alda.stop",
         "key": "alt+s",
+        "when": "editorTextFocus && editorLangId == alda"
+      },
+      {
+        "command": "vs-alda.context.add-selection",
+        "key": "alt+a",
+        "when": "editorTextFocus && editorLangId == alda"
+      },
+      {
+        "command": "vs-alda.context.clear",
+        "key": "alt+c",
+        "when": "editorTextFocus && editorLangId == alda"
+      },
+      {
+        "command": "vs-alda.context.remove-first-line",
+        "key": "alt+1",
+        "when": "editorTextFocus && editorLangId == alda"
+      },
+      {
+        "command": "vs-alda.context.remove-last-line",
+        "key": "alt+0",
         "when": "editorTextFocus && editorLangId == alda"
       }
     ]

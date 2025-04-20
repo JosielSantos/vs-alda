@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { exec } from 'child_process';
+import { contextManager } from '../context-manager';
 
 export async function exportSelectionToMidi() {
     const editor = vscode.window.activeTextEditor;
@@ -7,10 +8,12 @@ export async function exportSelectionToMidi() {
         return;
     }
     const document = editor.document;
+    const contextLines = contextManager.get(document);
     const selection = editor.selection;
-    const text = selection.isEmpty
-        ? document.lineAt(selection.active.line).text
-        : document.getText(selection);
+    const selectedText = selection.isEmpty
+        ? [document.lineAt(selection.active.line).text]
+        : document.getText(selection).split('\n');
+    const finalText = [...contextLines, ...selectedText].join('\n');
     const defaultUri = document.uri.with({
         path: document.uri.path.replace(/\.alda$/, '.mid'),
     });
@@ -33,6 +36,6 @@ export async function exportSelectionToMidi() {
         }
         vscode.window.showInformationMessage(`MIDI file created: ${outputPath}`);
     });
-    child.stdin?.write(text);
+    child.stdin?.write(finalText);
     child.stdin?.end();
 }
