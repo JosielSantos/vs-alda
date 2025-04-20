@@ -42,3 +42,5 @@ See how to install it [here](https://alda.io/install).
 ## Known Issues
 
 * Do not check for alda installation
+* Keyboard shortcuts can conflict with VS Code natives
+* Extension commands need more feedback (loading, done, etc)
