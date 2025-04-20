@@ -8,7 +8,8 @@ This extension works when a **.alda** file is open.
 
 ## Features
 
-* Play selected part of score (alt+p)
+* Play selected text (alt+p)
+* Export selected text to MIDI (alt+shift+e)
 
 ## Requirements
 
@@ -26,6 +27,12 @@ See how to install it [here](https://alda.io/install).
 
 ## Release Notes
 
+### 0.2.0
+
+* Export selected text to MIDI
+
 ### 0.1.1
 
 Initial release of this experiment.
+
+* Play selected text
