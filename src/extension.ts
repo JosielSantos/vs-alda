@@ -3,11 +3,10 @@ import { playSelection } from './commands/play-selection';
 import { exportSelectionToMidi } from './commands/export-selection-to-midi';
 
 export function activate(context: vscode.ExtensionContext) {
-    let playSelectionCommand = vscode.commands.registerCommand('vs-alda.playSelection', playSelection);
-    let exportSelectionToMidiCommand = vscode.commands.registerCommand('vs-alda.exportSelectionToMidi', exportSelectionToMidi);
-
-    context.subscriptions.push(playSelectionCommand);
-    context.subscriptions.push(exportSelectionToMidiCommand);
+    context.subscriptions.push(
+        vscode.commands.registerCommand('vs-alda.playSelection', playSelection),
+        vscode.commands.registerCommand('vs-alda.exportSelectionToMidi', exportSelectionToMidi),
+    );
 }
 
 export function deactivate() { }
