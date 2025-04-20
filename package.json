@@ -2,7 +2,7 @@
   "name": "vs-alda",
   "displayName": "vs-alda",
   "description": "VS Code Extension for Alda Music",
-  "version": "0.3.0",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.99.0"
   },
