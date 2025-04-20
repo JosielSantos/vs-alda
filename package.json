@@ -59,37 +59,37 @@
     "keybindings": [
       {
         "command": "vs-alda.playSelection",
-        "key": "alt+p",
+        "key": "alt+l p",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.exportSelectionToMidi",
-        "key": "alt+shift+e",
+        "key": "alt+l e",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.stop",
-        "key": "alt+s",
+        "key": "alt+l s",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.context.add-selection",
-        "key": "alt+a",
+        "key": "alt+l a",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.context.clear",
-        "key": "alt+c",
+        "key": "alt+l c",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.context.remove-first-line",
-        "key": "alt+1",
+        "key": "alt+l 1",
         "when": "editorTextFocus && editorLangId == alda"
       },
       {
         "command": "vs-alda.context.remove-last-line",
-        "key": "alt+0",
+        "key": "alt+l 0",
         "when": "editorTextFocus && editorLangId == alda"
       }
     ]

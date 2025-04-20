@@ -8,9 +8,9 @@ This extension works when a **.alda** file is open.
 
 ## Features / using
 
-* Play selected text (alt+p)
-* Stop playback (alt+s)
-* Export selected text to MIDI (alt+shift+e)
+* Play selected text: alt+l p
+* Stop playback: alt+l s
+* Export selected text to MIDI: alt+l e
 
 ### Context Management
 
@@ -18,10 +18,10 @@ Sometimes a selection is not enough to make an Alda snippet playable — for exa
 
 You can compose a context incrementally and then play or export it together with your current selection.
 
-* Add current selection to context: alt+a
-* Remove first line from context: alt+1
-* Remove last line from context: alt+0
-* Clear context: alt+c
+* Add current selection to context: alt+l a
+* Remove first line from context: alt+l 1
+* Remove last line from context: alt+l 0
+* Clear context: alt+l c
 
 #### Behavior
 
@@ -42,5 +42,4 @@ See how to install it [here](https://alda.io/install).
 ## Known Issues
 
 * Do not check for alda installation
-* Keyboard shortcuts can conflict with VS Code natives
 * Extension commands need more feedback (loading, done, etc)
