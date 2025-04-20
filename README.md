@@ -10,6 +10,7 @@ This extension works when a **.alda** file is open.
 
 * Play selected text (alt+p)
 * Export selected text to MIDI (alt+shift+e)
+* Stop playback (alt+s)
 
 ## Requirements
 
@@ -26,6 +27,10 @@ See how to install it [here](https://alda.io/install).
 * Do not check for alda installation
 
 ## Release Notes
+
+### 0.3.0
+
+* Stop playback
 
 ### 0.2.0
 

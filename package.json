@@ -2,7 +2,7 @@
   "name": "vs-alda",
   "displayName": "vs-alda",
   "description": "VS Code Extension for Alda Music",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -34,6 +34,10 @@
       {
         "command": "vs-alda.exportSelectionToMidi",
         "title": "Alda: Export Selection to MIDI"
+      },
+      {
+        "command": "vs-alda.stop",
+        "title": "Alda: Stop"
       }
     ],
     "keybindings": [
@@ -46,7 +50,12 @@
         "command": "vs-alda.exportSelectionToMidi",
         "key": "alt+shift+e",
         "when": "editorTextFocus && editorLangId == alda"
-          }
+      },
+      {
+        "command": "vs-alda.stop",
+        "key": "alt+s",
+        "when": "editorTextFocus && editorLangId == alda"
+      }
     ]
   },
   "scripts": {
