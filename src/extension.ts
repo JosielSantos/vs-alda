@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { exec } from 'child_process';
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerCommand('vs-alda.playSelection', async () => {
+	let playSelectionCommand = vscode.commands.registerCommand('vs-alda.playSelection', async () => {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
 			vscode.window.showErrorMessage("No active editor");
@@ -14,16 +14,16 @@ export function activate(context: vscode.ExtensionContext) {
 			: editor.document.getText(selection);
 		const child = exec("alda play", (error, stdout, stderr) => {
 			if (error) {
-				vscode.window.showErrorMessage(`Erro ao tocar Alda: ${stderr}`);
+				vscode.window.showErrorMessage(`'alda play' error: ${stderr}`);
 				return;
 			}
-			vscode.window.setStatusBarMessage("🎵 Alda tocando...", 2000);
+			vscode.window.setStatusBarMessage("Alda playing...", 2000);
 		});
 		child.stdin?.write(text);
 		child.stdin?.end();
 	});
 
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(playSelectionCommand);
 }
 
 export function deactivate() { }
